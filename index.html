@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="angular-qr_files/angular.min.js" type="text/javascript"></script>
+        <script src="angular-qr_files/qrcode.js"></script>
+        <script src="angular-qr_files/angular-qr.js"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        
+        <script type="text/javascript" src=""></script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="qrCodeApp">
+
+  <div ng-controller="qrCodeCtrl">
+
+    <p>
+        
+      <qr text="qrcodeString" type-number="typeNumber" correction-level="correctionLevel" size="200" input-mode="inputMode" image="true" >
+      </qr>
+    
+    </p>
+    <form>
+        <input type="text" id="input2" ng-model="string" placeholder="Enter text here"></input>
+      <button type="submit" ng-click="generateQr()">generate</button>
+    </form>
+    <p>
+        For Immediate Response :<br />
+        <input type="text" ng-model="qrcodeString" placeholder="Enter text here"></input>
+    </p>
+
+   
+</div>
+</script>
+
+</body>
+</html>
